@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Dynamic Programming</a>
+        <a class="active" href="section1.html">About</a>
+        <a href="section2.html">Uses in Dynamic Programming</a>
+        <a href="section3.html">Examples of Dynamic Programming Computer algorithms</a>
+        <a href="see_also.html">See Also</a>
+        <a href="references.html">References</a>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" >
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Page content -->
+    <div class="content">
+        Often times when using Dynamic programming we can reduce the amount of time an algorithm solves a problem. 
+        A common example of this is reducing the time complexity from expoential to a polynomial runtime*(ex:exponential 
+        to linear runtime)*. This technique breaks down the problem into simplier sub-prpblems, and programming this can
+        often mean using helper methods to solve a part of a question if that part of the question shows up multiple times 
+        in a problem. For example, keeping a seperate method for sorting an array in a complex array programming question 
+        could be considered dynamic programming.
+    </div>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://miro.medium.com/max/1400/1*MXpfyivX8XmtULGNiXXmEw.png" style="width:100%">
+      <div class="text">Dynamic Programming</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnbt0704-909/MediaObjects/41587_2004_Article_BFnbt0704909_Fig1_HTML.gif" style="width:100%">
+      <div class="text">Dynamic Programming Matrix</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Shortest_path_optimal_substructure.svg/1200px-Shortest_path_optimal_substructure.svg.png" style="width:100%">
+      <div class="text">Dynamic Programming Example</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+</body>
+
+<script src="js/main.js"></script>
+<script>
+
+var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+     </script>
+
+</html>

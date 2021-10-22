@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Dynamic Programming</a>
+        <a href="section1.html">About</a>
+        <a href="section2.html">Uses in Dynamic Programming</a>
+        <a class="active" href="section3.html">Examples of Dynamic Programming Computer algorithms</a>
+        <a href="see_also.html">See Also</a>
+        <a href="references.html">References</a>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+
+    <!-- Page content -->
+    <div class="content">
+        One of the simpliest examples of dybamic programming in computer science in when 
+        you have to <b>calculate the nth number in a fibonacci sequence.</b> The way dynamic 
+        programming improves the straightforward naiive approach, is instead of calculating 
+        the <a href="https://en.wikipedia.org/wiki/Fibonacci_number">fibonacci sequence</a>
+        for the numbers leading up to the nth number, <i>we store the 
+        values in a map </i>thereby removing all the uncessary recomputations that add the the 
+        time of the naiive algorithm approach. By removing uncessary operations we get to 
+        the most optimized version of the solving the ficonacci problem(the difference in 
+        time is from O(n^2) -> O(n)).
+        <br><br>
+
+        Another example dynamic programming is used is in path finding algorithms specifically 
+         <a href="https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/">Dijkstra's algorithm</a>. There is a dynamic programming functional equation that this
+        algorithm successively approximates the shortest distance from one node to another node.
+        The algorithm starts with a beginning vertex and find the shortest paths to all other 
+        nodes in the graph. Here is a simple example of the algorithm:<br><br>
+
+        <img src="https://i.ytimg.com/vi/pVfj6mxhdMw/hqdefault.jpg" style="width: 100%; height: auto;">
+
+
+
+    </div>
+
+</body>
+
+<script src="js/main.js"></script>
+
+
+</html>
